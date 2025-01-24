@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Candal", serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+header {
+    background-color: #A94A4A;
+    padding: 15px;
+    color: #FFF6DA;
+    text-align: start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #A94A4A;
+    color: #FFF6DA;
+    font-size: 20px;
+}
+
+.info-personal, .biografia {
+    width: 45%;
+}
+
+.info-personal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-personal img {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #A94A4A;
+}
+
+.linea {
+    width: 1px;
+    background-color: #ccc;
+    height: 80%;
+    align-self: center;
+}
+
+.biografia {
+    margin-right: 30px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio-section {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.bio-section.visible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .info-personal, .biografia {
+        width: 100%;
+        text-align: center;
+    }
+
+    .linea {
+        width: 80%;
+        height: 1px;
+        margin: 20px 0;
+    }
+
+    .info-personal img {
+        margin: 20px auto;
+    }
+}
